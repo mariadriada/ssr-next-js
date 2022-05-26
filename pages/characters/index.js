@@ -1,12 +1,16 @@
 import Link from "next/link";
+import Head from "next/head";
 
-import Layout from "./layout";
+import Layout from "../../components/layout";
 
 import style from "../../styles/Characters.module.css";
 
 const CharactersPage = ({ characters }) => {
   return (
     <Layout>
+      <Head>
+        <title>Charachers</title>
+      </Head>
       {characters.map((item) => (
         <div key={item.id}>
           <Link
